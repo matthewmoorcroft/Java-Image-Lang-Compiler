@@ -199,7 +199,7 @@ public class Validate {
 		Document doc = docCreate("ord2015.xml");
 
 		String response;
-		response = ordinaria(doc,"c1");
+		response = validator.ordinaria(doc,"c1");
 
 	}
 
