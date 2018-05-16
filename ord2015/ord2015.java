@@ -3,13 +3,34 @@ import java.io.IOException;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
-import com.sun.xml.ws.developer.ValidationErrorHandler;
 
 import org.w3c.dom.*;
 import org.xml.sax.ErrorHandler;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 import org.xml.sax.SAXParseException;
+
+class ValidationErrorHandler implements ErrorHandler {
+  protected boolean errors = false;
+
+  @Override
+  public void error(SAXParseException exception) throws SAXException {
+    System.err.println("Error: " + exception.getMessage());
+    errors = true;
+  }
+
+  @Override
+  public void fatalError(SAXParseException exception) throws SAXException {
+    System.err.println("Fatal error: " + exception.getMessage());
+    errors = true;
+  }
+
+  @Override
+  public void warning(SAXParseException exception) throws SAXException {
+    // Do nothing...
+  }
+
+}
 
 class ord2015 {
 
