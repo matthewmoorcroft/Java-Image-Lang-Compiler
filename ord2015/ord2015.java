@@ -54,13 +54,12 @@ class ord2015 {
             "http://java.sun.com/xml/jaxp/properties/schemaLanguage",
             "http://www.w3.org/2001/XMLSchema");
           factory.setNamespaceAware(true);
-      
+
       DocumentBuilder builder;
       try {
         builder = factory.newDocumentBuilder();
       } catch (ParserConfigurationException e) {
         e.printStackTrace();
-        return false;
       }
       try {
         ValidationErrorHandler handler = new ValidationErrorHandler();
