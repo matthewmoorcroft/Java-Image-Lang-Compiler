@@ -13,8 +13,8 @@
     </xsl:element>
   </xsl:template>
 
-  <!-- <xsl:template match="*">
-    <xsl:copy />
-  </xsl:template> -->
+  <xsl:template match="*">
+    <xsl:copy-of />
+  </xsl:template>
 
 </xsl:stylesheet>
