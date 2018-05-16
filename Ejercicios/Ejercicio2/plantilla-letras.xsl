@@ -13,7 +13,7 @@
   </xsl:template>
 
   <xsl:template match="*">
-    <xsl:copy select="descendant::e"/>
+    <xsl:copy />
   </xsl:template>
 
 </xsl:stylesheet>
