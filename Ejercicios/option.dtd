@@ -1,7 +1,7 @@
-<!ELEMENT libreria (pelicula +)>
-<!ELEMENT pelicula (titulo, director, año, duracion, actores, genero +, nacionalidad +)>
+<!ELEMENT libreria (pelicula+)>
+<!ELEMENT pelicula (titulo, director, año, duracion, actores, genero+, nacionalidad+)>
 <!ATTLIST pelicula id ID #REQUIRED>
-<!ELEMENT actores ((actor, personaje *)+)>
+<!ELEMENT actores ((actor, personaje*)+)>
 <!ELEMENT titulo (#PCDATA)>
 <!ELEMENT director (#PCDATA)>
 <!ELEMENT año (#PCDATA)>
