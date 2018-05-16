@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Catalogo SYSTEM "DTDCatalogo.dtd">
+
+<Catalogo>
+
+	<!--<Pelicula Titulo="" Anyo="" Duracion="">
+		<Director Nombre ="" Apellido=""></Director>
+		<Actor Nombre ="" Apellido="" ></Actor>
+		<Genero> <![CDATA []]> </Genero>
+		<Nacionalidad> <![CDATA []]> </Nacionalidad>
+	</Pelicula>-->
+	
+	<Pelicula Titulo="HarryPotter" Año="2001" Duracion="120">
+		<Director Nombre ="Pepe" Apellido="Holis"></Director>
+		<Actor Nombre ="Daniel" Apellido="Raciffle" ></Actor>
+		<Genero> "Infantil" </Genero>
+		<Nacionalidad> EEUU </Nacionalidad>
+	</Pelicula>
+
+
+</Catalogo>

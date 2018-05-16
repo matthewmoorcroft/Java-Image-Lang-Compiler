@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Catalogo SYSTEM "DTDCatalogo.dtd">
+
+<Catalogo>
+
+	<!--<Pelicula Titulo="" Anyo="" Duracion="">
+		<Director Nombre ="" Apellido=""></Director>
+		<Actor Nombre ="" Apellido="" ></Actor>
+		<Genero> <![CDATA []]> </Genero>
+		<Nacionalidad> <![CDATA []]> </Nacionalidad>
+	</Pelicula>-->
+	
+	<Pelicula Titulo=" HarryPotter " Año="2001" Duracion="120">
+		<Director Nombre ="Pepe" Apellido="Holis"></Director>
+		<Actor Nombre ="Daniel" Apellido="Raciffle" ></Actor>
+		<Genero> "Infantil" </Genero>
+		<Nacionalidad> EEUU </Nacionalidad>
+	</Pelicula>
+	<Pelicula Titulo="HoliHolu " Año="2014" Duracion="2">
+		<Director Nombre ="Vero" Apellido="Sabina"></Director>
+		<Actor Nombre ="Marina" Apellido="Parrado" ></Actor>
+		<Genero> "Patines" </Genero>
+		<Nacionalidad> Sp </Nacionalidad>
+	</Pelicula>
+	<Pelicula Titulo="Peli sin nada mas que titulo"></Pelicula>
+
+
+</Catalogo>

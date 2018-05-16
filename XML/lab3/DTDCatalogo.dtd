@@ -1,0 +1,26 @@
+﻿<!ELEMENT Catalogo (Pelicula)*>
+
+<!ELEMENT Pelicula (Director|Actor|Genero|Nacionalidad)*>
+	<!ATTLIST Pelicula
+		Titulo ID #REQUIRED
+		Duracion CDATA #IMPLIED
+		Año CDATA #IMPLIED
+	>
+	
+	
+<!ELEMENT Actor EMPTY>
+	<!ATTLIST Actor
+		Nombre CDATA #IMPLIED
+		Apellido CDATA #REQUIRED
+		Profesion CDATA #FIXED "Actor"
+	>
+	
+<!ELEMENT Director EMPTY>
+	<!ATTLIST Director
+		Nombre CDATA #IMPLIED
+		Apellido CDATA #REQUIRED
+		Profesion CDATA #FIXED "Director"
+	>
+	
+<!ELEMENT Genero (#PCDATA)>
+<!ELEMENT Nacionalidad (#PCDATA)>
