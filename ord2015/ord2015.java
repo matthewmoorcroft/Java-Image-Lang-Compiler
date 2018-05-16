@@ -35,7 +35,7 @@ class ValidationErrorHandler implements ErrorHandler {
 
 
 
-  private static String ordinaria(Document doc, String referencia){
+  private String ordinaria(Document doc, String referencia){
     Element el1,el2, docE1;
     NodeList nL, nL2;
     int i, j, s1, s2;
