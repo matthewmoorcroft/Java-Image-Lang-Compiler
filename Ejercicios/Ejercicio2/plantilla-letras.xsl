@@ -27,7 +27,7 @@
   </xsl:copy>
   </xsl:template>
 
-  <xsl:template match="//d">
+  <xsl:template match="@*">
   <xsl:copy />
   </xsl:template>
 
