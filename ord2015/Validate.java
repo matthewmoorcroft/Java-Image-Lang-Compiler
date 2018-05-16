@@ -110,11 +110,22 @@ public class Validate {
 	}
 	public Document docCreate(String fileName) {
 		boolean wellFormed = false;
+		Document document;
 		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 		factory.setValidating(false);
-		DocumentBuilder	builder = factory.newDocumentBuilder();
-
-			Document document = builder.parse(new InputSource(fileName));
+		DocumentBuilder builder;
+		try {
+			builder = factory.newDocumentBuilder();
+		} catch (ParserConfigurationException e) {
+			e.printStackTrace();
+		}
+		try {
+			document = builder.parse(new InputSource(fileName));
+		} catch (SAXException e) {
+			wellFormed = false;
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 
 		return document;
 	}
