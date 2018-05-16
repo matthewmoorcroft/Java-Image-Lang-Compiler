@@ -6,7 +6,7 @@
 
   <xsl:output method="xml" indent="yes" encoding="ISO-8859-1" />
 
-  <xsl:template match="/d">
+  <xsl:template match="/e">
     <xsl:element name="e" >
       <xsl:apply-templates select="descendant::d" />
     </xsl:element>
