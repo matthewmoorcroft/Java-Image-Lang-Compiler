@@ -110,10 +110,9 @@ public class Validate {
 	}
 	public Document docCreate(String fileName) {
 		boolean wellFormed = false;
-		Document document = new Document();
 		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 		factory.setValidating(false);
-		DocumentBuilder builder = new Builder();
+		DocumentBuilder builder;
 		try {
 			builder = factory.newDocumentBuilder();
 		} catch (ParserConfigurationException e) {
@@ -121,13 +120,14 @@ public class Validate {
 		}
 		try {
 			document = builder.parse(new InputSource(fileName));
+			return document;
 		} catch (SAXException e) {
 			wellFormed = false;
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 
-		return document;
+
 	}
 	private static String ordinaria(Document doc, String referencia){
     Element el1,el2, docE1;
