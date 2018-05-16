@@ -8,12 +8,12 @@
 
   <xsl:template match="/a">
     <xsl:element name="a" >
-      <xsl:apply-templates select="d/child::e" />
+      <xsl:apply-templates select="descendant::e" />
     </xsl:element>
   </xsl:template>
 
-  <xsl:template match="*">
-    <xsl:copy-of select="d/child::e"/>
+  <xsl:template match="e">
+    <xsl:copy-of select="descendant::e"/>
   </xsl:template>
 
 </xsl:stylesheet>
