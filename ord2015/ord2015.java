@@ -46,6 +46,35 @@ class ord2015 {
   }
 
     public static void main(String[] args) {
+
+      boolean valid = false;
+      DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+      factory.setValidating(true);
+          factory.setAttribute(
+            "http://java.sun.com/xml/jaxp/properties/schemaLanguage",
+            "http://www.w3.org/2001/XMLSchema");
+          factory.setNamespaceAware(true);
+      
+      DocumentBuilder builder;
+      try {
+        builder = factory.newDocumentBuilder();
+      } catch (ParserConfigurationException e) {
+        e.printStackTrace();
+        return false;
+      }
+      try {
+        ValidationErrorHandler handler = new ValidationErrorHandler();
+        builder.setErrorHandler(handler);
+        Document document = builder.parse(new InputSource(fileName));
+        valid = !handler.errors;
+      } catch (SAXException e) {
+        valid = false;
+      } catch (IOException e) {
+        valid = false;
+        e.printStackTrace();
+      }
+
+
         String response;
         Document document = builder.parse(new InputSource("ord2015.xml"));
         response = ordinaria(document,"c1");
