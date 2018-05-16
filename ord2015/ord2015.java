@@ -47,7 +47,8 @@ class ord2015 {
 
     public static void main(String[] args) {
         String response;
-        response = ordinaria("ord2015.xml","c1");
+        Document document = builder.parse(new InputSource("ord2015.xml"));
+        response = ordinaria(document,"c1");
         System.out.println(response);
     }
 }
