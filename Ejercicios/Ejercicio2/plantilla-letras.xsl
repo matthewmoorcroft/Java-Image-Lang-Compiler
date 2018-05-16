@@ -21,7 +21,7 @@
   <!-- <xsl:template match="/d">
     <xsl:copy-of select="//f"/>
   </xsl:template> -->
-  <xsl:template match="*">
+  <xsl:template match="d">
   <xsl:copy>
     <xsl:apply-templates select="descendant::d"/>
   </xsl:copy>
