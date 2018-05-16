@@ -35,7 +35,33 @@ class ValidationErrorHandler implements ErrorHandler {
 
 
 
-  public String ordinaria(Document doc, String referencia){
+  public String ordinaria(String fileName, String referencia){
+    boolean valid = false;
+    DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+    factory.setValidating(true);
+        factory.setAttribute(
+          "http://java.sun.com/xml/jaxp/properties/schemaLanguage",
+          "http://www.w3.org/2001/XMLSchema");
+        factory.setNamespaceAware(true);
+
+    DocumentBuilder builder;
+    try {
+      builder = factory.newDocumentBuilder();
+    } catch (ParserConfigurationException e) {
+      e.printStackTrace();
+    }
+    try {
+      ValidationErrorHandler handler = new ValidationErrorHandler();
+      builder.setErrorHandler(handler);
+      Document doc = builder.parse(new InputSource(fileName));
+
+      valid = !handler.errors;
+    } catch (SAXException e) {
+      valid = false;
+    } catch (IOException e) {
+      valid = false;
+      e.printStackTrace();
+    }
     Element el1,el2, docE1;
     NodeList nL, nL2;
     int i, j, s1, s2;
@@ -69,35 +95,10 @@ class ValidationErrorHandler implements ErrorHandler {
   }
 
     public static void main(String[] args) {
+      String response;
+      response = ordinaria("ord2015.xml","c1");
+      System.out.println(response);
 
-      boolean valid = false;
-      DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-      factory.setValidating(true);
-          factory.setAttribute(
-            "http://java.sun.com/xml/jaxp/properties/schemaLanguage",
-            "http://www.w3.org/2001/XMLSchema");
-          factory.setNamespaceAware(true);
-
-      DocumentBuilder builder;
-      try {
-        builder = factory.newDocumentBuilder();
-      } catch (ParserConfigurationException e) {
-        e.printStackTrace();
-      }
-      try {
-        ValidationErrorHandler handler = new ValidationErrorHandler();
-        builder.setErrorHandler(handler);
-        Document document = builder.parse(new InputSource("ord2015.xml"));
-        String response;
-        response = ordinaria(document,"c1");
-        System.out.println(response);
-        valid = !handler.errors;
-      } catch (SAXException e) {
-        valid = false;
-      } catch (IOException e) {
-        valid = false;
-        e.printStackTrace();
-      }
 
 
 
