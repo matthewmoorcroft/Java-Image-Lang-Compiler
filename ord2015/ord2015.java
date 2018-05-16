@@ -87,6 +87,9 @@ class ord2015 {
         ValidationErrorHandler handler = new ValidationErrorHandler();
         builder.setErrorHandler(handler);
         Document document = builder.parse(new InputSource("ord2015.xml"));
+        String response;
+        response = ordinaria(document,"c1");
+        System.out.println(response);
         valid = !handler.errors;
       } catch (SAXException e) {
         valid = false;
@@ -96,8 +99,6 @@ class ord2015 {
       }
 
 
-        String response;
-        response = ordinaria(document,"c1");
-        System.out.println(response);
+
     }
 }
