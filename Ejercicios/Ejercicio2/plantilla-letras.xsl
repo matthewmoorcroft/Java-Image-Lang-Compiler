@@ -14,7 +14,7 @@
   </xsl:template>
 
   <xsl:template match="*">
-    <xsl:copy-of select="e/descendant::d"/>
+    <xsl:copy-of select="d/descendant::e"/>
   </xsl:template>
 
 </xsl:stylesheet>
