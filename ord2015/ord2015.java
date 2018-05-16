@@ -10,6 +10,7 @@ import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 import org.xml.sax.SAXParseException;
 
+class ord2015 {
 class ValidationErrorHandler implements ErrorHandler {
   protected boolean errors = false;
 
@@ -32,7 +33,7 @@ class ValidationErrorHandler implements ErrorHandler {
 
 }
 
-class ord2015 {
+
 
   private static String ordinaria(Document doc, String referencia){
     Element el1,el2, docE1;
