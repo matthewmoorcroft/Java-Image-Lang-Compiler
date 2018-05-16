@@ -1,3 +1,5 @@
+import org.w3c.dom.*;
+
 class ord2015 {
 
   private static String ordinaria(Document doc, String referencia){
