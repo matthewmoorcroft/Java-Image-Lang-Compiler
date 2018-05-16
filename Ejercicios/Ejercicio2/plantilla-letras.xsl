@@ -19,7 +19,7 @@
   </xsl:template> -->
 
   <xsl:template match="/d">
-    <xsl:copy-of select="//*"/>
+    <xsl:copy-of select="//f"/>
   </xsl:template>
 
 </xsl:stylesheet>
