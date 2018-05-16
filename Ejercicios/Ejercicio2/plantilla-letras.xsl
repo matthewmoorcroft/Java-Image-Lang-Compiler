@@ -6,15 +6,14 @@
 
   <xsl:output method="xml" indent="yes" encoding="ISO-8859-1" />
 
-  <xsl:template match="/a">
-    <xsl:element name="a" >
-      <xsl:apply-templates select="descendant::e" />
+  <xsl:template match="/d">
+    <xsl:element name="e" >
       <xsl:apply-templates select="descendant::d" />
     </xsl:element>
   </xsl:template>
 
   <xsl:template match="*">
-    <xsl:copy select="descendant::e"/>
+    <xsl:copy />
   </xsl:template>
 
 </xsl:stylesheet>
