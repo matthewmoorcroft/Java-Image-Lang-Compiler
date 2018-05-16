@@ -9,11 +9,12 @@
   <xsl:template match="/a">
     <xsl:element name="a" >
       <xsl:apply-templates select="descendant::e" />
+      <xsl:apply-templates select="descendant::d" />
     </xsl:element>
   </xsl:template>
 
-  <xsl:template match="d">
-    <xsl:copy-of select="descendant::e"/>
+  <xsl:template match="e">
+    <xsl:copy-of select="e"/>
   </xsl:template>
 
 </xsl:stylesheet>
