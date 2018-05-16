@@ -13,8 +13,8 @@
     </xsl:element>
   </xsl:template>
 
-  <xsl:template match="d">
-    <xsl:copy-of select="d/descendant::e"/>
+  <xsl:template match="e">
+    <xsl:copy-of select="descendant::e"/>
   </xsl:template>
 
 </xsl:stylesheet>
