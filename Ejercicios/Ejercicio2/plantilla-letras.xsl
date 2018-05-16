@@ -14,7 +14,7 @@
 
   <xsl:template match="/e">
     <xsl:element name="e" >
-      <xsl:apply-templates select="//e"/>
+      <xsl:apply-templates select="/d"/>
     </xsl:element>
   </xsl:template>
 
