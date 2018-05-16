@@ -14,12 +14,10 @@
 
   <xsl:template match="/e">
     <xsl:element name="e" >
-      <xsl:apply-templates select="/d"/>
+      <xsl:copy-of select="/d"/>
     </xsl:element>
   </xsl:template>
 
-  <xsl:template match="d">
-    <xsl:copy-of select="e/d"/>
-  </xsl:template>
+
 
 </xsl:stylesheet>
