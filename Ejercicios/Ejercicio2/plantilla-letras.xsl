@@ -23,12 +23,12 @@
   </xsl:template> -->
   <xsl:template match="*">
   <xsl:copy>
-    <xsl:apply-templates select="@*"/>
+    <xsl:apply-templates select="descendant::d"/>
   </xsl:copy>
   </xsl:template>
 
-  <xsl:template match="@*">
+  <!-- <xsl:template match="*">
   <xsl:copy />
-  </xsl:template>
+  </xsl:template> -->
 
 </xsl:stylesheet>
