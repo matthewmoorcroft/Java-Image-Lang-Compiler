@@ -14,7 +14,7 @@
 
   <xsl:template match="/d">
     <xsl:element name="d" >
-      <xsl:apply-templates select="child:d"/>
+      <xsl:apply-templates select="child::d"/>
     </xsl:element>
   </xsl:template>
 
