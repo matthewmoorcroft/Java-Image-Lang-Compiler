@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+
+<a id="a1">
+
+  <b id="b1">Letra <c id="c1">B</c></b>
+  <d id="d1">
+    <b id="b2">Otra vez</b>
+    <e id="e1">
+      <d id="d2">
+	<e id="e2">
+	  <f id="f1" tipo="terminal" />
+	</e>
+      </d>
+    </e>
+  </d>
+
+  <d id="d3">
+    <b id="b3"><c id="c2">...</c></b>
+    <e id="e3">
+      <f id="f2" tipo="elemental">
+	<b id="b4">Letra F</b>
+      </f>
+    </e>
+  </d>
+
+  <e id="e4">
+    <f id="f3" tipo="terminal" />
+  </e>
+
+</a>
+
