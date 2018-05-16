@@ -4,7 +4,7 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
-import org.w3c.dom.Document;
+import org.w3c.dom.*;
 import org.xml.sax.ErrorHandler;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
@@ -200,7 +200,7 @@ public class Validate {
 		Document doc = doCreate("ord2015.xml");
 
 		String response;
-		response = ord2015(doc,"c1");
+		response = ordinaria(doc,"c1");
 
 	}
 
