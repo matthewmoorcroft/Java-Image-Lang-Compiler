@@ -36,6 +36,6 @@ class ord2015 {
     public static void main(String[] args) {
         String response;
         response = ordinaria("ord2015.xml","c1");
-        System.out.println("%s",response);
+        System.out.println(response);
     }
 }
