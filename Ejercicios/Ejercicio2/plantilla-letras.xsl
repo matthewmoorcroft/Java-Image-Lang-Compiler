@@ -13,7 +13,7 @@
   </xsl:template>
 
   <xsl:template match="e">
-    <xsl:copy-of select="e/d"/>
+    <xsl:copy-of select="e/f"/>
   </xsl:template>
 
 </xsl:stylesheet>
