@@ -1,5 +1,5 @@
 <?xml version = "1.0" encoding = "UTF-8"?>
-<!DOCTYPE personal SYSTEM "option.dtd">
+<!DOCTYPE libreria SYSTEM "option.dtd">
 <libreria>
   <pelicula id="1">
     <titulo>Sala 6</titulo>
