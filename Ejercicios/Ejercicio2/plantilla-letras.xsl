@@ -9,7 +9,6 @@
   <xsl:template match="/a">
     <xsl:element name="a" >
       <xsl:apply-templates select="child::e" />
-      <xsl:apply-templates select="child::d" />
     </xsl:element>
   </xsl:template>
 <!--
@@ -19,7 +18,7 @@
     </xsl:element>
   </xsl:template> -->
 
-  <xsl:template match="*">
+  <xsl:template match="d">
     <xsl:copy-of select="//f"/>
   </xsl:template>
 
