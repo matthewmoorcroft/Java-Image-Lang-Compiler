@@ -8,7 +8,7 @@
 
   <xsl:template match="/a">
     <xsl:element name="a" >
-      <xsl:apply-templates select="child::b" />
+      <xsl:apply-templates select="child::e" />
     </xsl:element>
   </xsl:template>
 <!--
@@ -18,8 +18,8 @@
     </xsl:element>
   </xsl:template> -->
 
-  <xsl:template match="//f">
-    <xsl:copy-of select="//e"/>
+  <xsl:template match="/d">
+    <xsl:copy-of select="//*"/>
   </xsl:template>
 
 </xsl:stylesheet>
