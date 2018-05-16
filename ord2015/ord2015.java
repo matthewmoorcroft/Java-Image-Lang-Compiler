@@ -3,6 +3,7 @@ import java.io.IOException;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
+import com.sun.xml.ws.developer.ValidationErrorHandler;
 
 import org.w3c.dom.*;
 import org.xml.sax.ErrorHandler;
