@@ -134,7 +134,8 @@ public class Validate {
     NodeList nL, nL2;
     int i, j, s1, s2;
     Node n1, n2;
-    docEl= doc.getDocumentElement();
+		Document doc1 = doc;
+    docEl= doc1.getDocumentElement();
     nL= docEl.getChildNodes();
     s1= nL.getLength();
     if (s1>0) {
