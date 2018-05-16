@@ -1,7 +1,7 @@
 <?xml version = "1.0" encoding = "UTF-8"?>
 <!DOCTYPE libreria SYSTEM "option.dtd">
 <libreria>
-  <pelicula id="1">
+  <pelicula >
     <titulo>Sala 6</titulo>
     <director>Maria</director>
     <año>2018</año>
