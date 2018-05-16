@@ -114,14 +114,12 @@ public class Validate {
 			builder = factory.newDocumentBuilder();
 		} catch (ParserConfigurationException e) {
 			e.printStackTrace();
-			return false;
 		}
 		try {
 			Document document = builder.parse(new InputSource(fileName));
 		} catch (SAXException e) {
 			wellFormed = false;
 		} catch (IOException e) {
-			return ;
 			e.printStackTrace();
 		}
 
