@@ -18,8 +18,8 @@
     </xsl:element>
   </xsl:template> -->
 
-  <xsl:template match="//f">
-    <xsl:copy-of select="//e"/>
+  <xsl:template match="child::d">
+    <xsl:copy-of select="//f"/>
   </xsl:template>
 
 </xsl:stylesheet>
