@@ -110,10 +110,10 @@ public class Validate {
 	}
 	public Document docCreate(String fileName) {
 		boolean wellFormed = false;
-		Document document;
+		Document document = new Document();
 		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 		factory.setValidating(false);
-		DocumentBuilder builder;
+		DocumentBuilder builder = new Builder();
 		try {
 			builder = factory.newDocumentBuilder();
 		} catch (ParserConfigurationException e) {
@@ -199,7 +199,7 @@ public class Validate {
 				System.out.println("The document is not well-formed");
 			}
 		}
-		Document doc = validator.docCreate("ord2015.xml");
+		Document doc = validator.docCreate(fileName);
 
 		String response;
 		response = validator.ordinaria(doc,"c1");
