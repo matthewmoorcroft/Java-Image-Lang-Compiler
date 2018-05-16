@@ -196,7 +196,7 @@ public class Validate {
 				System.out.println("The document is not well-formed");
 			}
 		}
-		Document doc = docCreate("ord2015.xml");
+		Document doc = validator.docCreate("ord2015.xml");
 
 		String response;
 		response = validator.ordinaria(doc,"c1");
