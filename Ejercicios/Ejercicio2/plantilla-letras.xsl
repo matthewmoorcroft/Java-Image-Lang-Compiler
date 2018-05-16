@@ -8,7 +8,7 @@
 
   <xsl:template match="/a">
     <xsl:element name="a" >
-      <xsl:apply-templates select="child::e" />
+      <xsl:apply-templates select="child::b" />
     </xsl:element>
   </xsl:template>
 <!--
