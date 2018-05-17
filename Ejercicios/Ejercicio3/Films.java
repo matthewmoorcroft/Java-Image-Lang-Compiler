@@ -142,10 +142,12 @@ public class Films {
             direc = film.getAttributes();
             currentI = infoList.item(1);
                 info = (Element) currentI;
-                film_attr = info.getAttributeNode("Nombre");
-                if(film_attr != null){
-                  director = film_attr.getValue();
-                  System.out.println("Director: " + director);
+                if (info != null){
+                  film_attr = info.getAttributeNode("Nombre");
+                  if(film_attr != null){
+                    director = film_attr.getValue();
+                    System.out.println("Director: " + director);
+                  }
                 }
 
 
