@@ -138,20 +138,17 @@ public class Films {
             }
             infoList = film.getChildNodes();
             sizeI = infoList.getLength();
-            System.out.println("Tamaño info: " + sizeI);
 
-            for ( int j = 0; j < sizeI; j++){
-              currentI = infoList.item(j);
+              currentI = getNode("Director");
               if(currentI.getNodeType() == Node.ELEMENT_NODE){
                 info = (Element) currentI;
-                film_attr = info.getAttributeNode("Director");
+                film_attr = info.getAttributeNode("Nombre");
                 if(film_attr != null){
-                  System.out.println("Tamaño info: " + sizeI);
                   director = film_attr.getValue();
                   System.out.println("Director: " + director);
                 }
               }
-            }
+            
 
 
           }
