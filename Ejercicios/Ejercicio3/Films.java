@@ -171,7 +171,8 @@ public class Films {
 
         docE1 = doc.getDocumentElement();
         filmList = docE1.getChildNodes();
-        current = filmList.item(0);
+        current = filmList.item(1);
+
         film = (Element) current;
         newFilm = film.cloneNode(false);
         newFilmE = (Element) newFilm;
