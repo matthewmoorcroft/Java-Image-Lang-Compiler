@@ -88,9 +88,10 @@ public class Films {
     }
 
     private void printTitle(Document doc){
-      Element docE1;
+      Element docE1, film;
       NodeList listaPeliculas;
       Node current;
+      Attr title_attr;
       int size;
       String title;
 
@@ -100,11 +101,13 @@ public class Films {
 
       for(int i = 0; i < size; i++){
         current = listaPeliculas.item(i);
-        title = current.getAttribute("Titulo");
+        film = (Element) current;
+        title_attr = film.getAttributeNode("Titulo")
+        title = title_attr.getValue();
         System.out.println(title);
       }
     }
-      private void printTitle(Document doc){}
+      private void printInfo(Document doc){}
 
       private void addFilm(Document doc){}
 
