@@ -178,7 +178,7 @@ public class Films {
           title = films.readInput("Escriba el título de la película: ");
         }
         newFilmE.setAttribute("Titulo", title);
-        year = films.readInput("Año: ")
+        year = films.readInput("Año: ");
         newFilmE.setAttribute("Año:", year);
         duration = films.readInput("Duración:");
         newFilmE.setAttribute("Duracion", duration);
