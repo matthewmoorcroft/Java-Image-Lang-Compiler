@@ -169,6 +169,7 @@ public class Films {
         Attr node_attr;
         String title = null, year = null, duration = null, node_name;
         Films films = new Films();
+        int position = 0;
 
         docE1 = doc.getDocumentElement();
         filmList = docE1.getChildNodes();
@@ -176,10 +177,11 @@ public class Films {
             current = filmList.item(i);
             if(current.getNodeType() == Node.ELEMENT_NODE){
                   film = (Element) current;
+                  position = i;
                   break;
             }
         }
-
+        System.out.println(position)
         if(film != null){
           newFilm = film.cloneNode(false);
           newFilmE = (Element) newFilm;
