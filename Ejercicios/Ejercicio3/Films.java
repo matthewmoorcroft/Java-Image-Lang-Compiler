@@ -165,14 +165,14 @@ public class Films {
 
         Element docE1, newFilmE;
         NodeList filmList;
-        Node newFilm;
+        Node newFilm, current;
         String title = null, year = null, duration = null;
         Films films = new Films();
 
         docE1 = doc.getDocumentElement();
         filmList = docE1.getChildNodes();
-
-        newFilm = docE1.cloneNode(false);
+        current
+        newFilm = ((Element)((Node)docE1).getFirstChild()).cloneNode(false);
         newFilmE = (Element) newFilm;
 
         while(title == null){
