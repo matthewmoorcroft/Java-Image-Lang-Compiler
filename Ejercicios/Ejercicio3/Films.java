@@ -95,13 +95,13 @@ public class Films {
       String title;
 
       docE1 = doc.getDocumentElement();
-      nL = docE1.getChildNodes();
+      listaPeliculas = docE1.getChildNodes();
       size = listaPeliculas.getLength();
 
       for(int i = 0; i < size; i++){
         current = listaPeliculas.getItem(i);
         title = current.getAttribute("Titulo");
-        System.out.printl(title);
+        System.out.println(title);
       }
 
 
