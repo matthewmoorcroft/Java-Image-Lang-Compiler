@@ -172,25 +172,25 @@ public class Films {
         docE1 = doc.getDocumentElement();
         filmList = docE1.getChildNodes();
         current = filmList.item(1);
-        if(current.getNodeType() == Node.ELEMENT_NODE)
+        if(current.getNodeType() == Node.ELEMENT_NODE){
           film = (Element) current;
-        newFilm = film.cloneNode(false);
-        newFilmE = (Element) newFilm;
+          newFilm = film.cloneNode(false);
+          newFilmE = (Element) newFilm;
 
-        while(title == null){
-          title = films.readInput("Escriba el título de la película: ");
+          while(title == null){
+            title = films.readInput("Escriba el título de la película: ");
+          }
+          newFilmE.setAttribute("Titulo", title);
+          year = films.readInput("Año: ");
+          newFilmE.setAttribute("Año:", year);
+          duration = films.readInput("Duración:");
+          newFilmE.setAttribute("Duracion", duration);
+
+          //newFilm = (Node) newFilmE;
+          ((Node)docE1).appendChild(newFilm);
+
+          films.serialize(doc,   filename);
         }
-        newFilmE.setAttribute("Titulo", title);
-        year = films.readInput("Año: ");
-        newFilmE.setAttribute("Año:", year);
-        duration = films.readInput("Duración:");
-        newFilmE.setAttribute("Duracion", duration);
-
-        //newFilm = (Node) newFilmE;
-        ((Node)docE1).appendChild(newFilm);
-
-        films.serialize(doc,   filename);
-
       }
 
 
