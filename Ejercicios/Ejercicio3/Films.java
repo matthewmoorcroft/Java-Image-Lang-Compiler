@@ -114,7 +114,7 @@ public class Films {
         NodeList filmList, infoList;
         Node currentF, currentI;
         Attr film_attr;
-        String title, director;
+        String title, director, yearString;
         int sizeF, sizeI, year;
 
         docE1 = doc.getDocumentElement();
@@ -132,7 +132,8 @@ public class Films {
 
             film_attr = film.getAttributeNode("Año");
             if(film_attr != null){
-              year = film_attr.getValue();
+              yearString = film_attr.getValue();
+              year = parseInt(yearString);
               System.out.println("Año: " + year);
             }
             infoList = film.getChildNodes();
