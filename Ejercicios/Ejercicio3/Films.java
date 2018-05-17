@@ -133,7 +133,7 @@ public class Films {
             film_attr = film.getAttributeNode("Año");
             if(film_attr != null){
               yearString = film_attr.getValue();
-              year = parseInt(yearString);
+              year = String.parseInt(yearString);
               System.out.println("Año: " + year);
             }
             infoList = film.getChildNodes();
