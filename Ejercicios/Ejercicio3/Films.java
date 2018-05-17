@@ -160,7 +160,7 @@ public class Films {
 
       }
 
-      private void addFilm(Document doc, File filename) throws IOException{
+      private void addFilm(Document doc, File filename) throws IOException, ClassNotFoundException{
 
         Element docE1, newFilmE;
         NodeList filmList;
@@ -186,7 +186,7 @@ public class Films {
         //newFilm = (Node) newFilmE;
         ((Node)docE1).appendChild(newFilm);
 
-        films.serialize(doc, filename);
+        films.serialize(doc,   filename);
 
       }
 
