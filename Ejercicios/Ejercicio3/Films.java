@@ -160,14 +160,34 @@ public class Films {
 
       }
 
-      private void addFilm(Document doc) throws IOException{
+      private void addFilm(Document doc, String filename) throws IOException{
 
+        Element docE1, newFilmE;
+        NodeList filmList;
+        Node newFilm;
         String title = null, year = null, duration = null;
         Films films = new Films();
 
+        docE1 = doc.getDocumentElement();
+        filmList = docE1.getChildNodes();
+
+        newFilm = docE1.cloneNode(false);
+        newFilmE = (Element) newFilm;
+
         while(title == null){
-          title = films.readInput("Escriba el título de la película");
+          title = films.readInput("Escriba el título de la película: ");
         }
+        newFilmE.setAttribute("Titulo", title);
+        year = films.readInput("Año: ")
+        newFilmE.setAttribute("Año:", year);
+        duration = films.readInput("Duración:");
+        newFilmE.setAttribute("Duracion", duration);
+
+        //newFilm = (Node) newFilmE;
+        ((Node)docE1).appendChild(newFilm);
+
+        films.serialize(doc, filename);
+
       }
 
 
@@ -189,7 +209,7 @@ public class Films {
   	}else if ("-L".equals(args[0])){
         films.printInfo(doc);
     }else if ("-a".equals(args[0])){
-        films.addFilm(doc);
+        films.addFilm(doc, file);
     }
   }
 
