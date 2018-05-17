@@ -111,7 +111,7 @@ public class Films {
     }
       private void printInfo(Document doc){
         Element docE1, film, info;
-        NodeList filmList, info;
+        NodeList filmList, infoList;
         Node currentF, currentI;
         Attr film_attr;
         String title, director;
@@ -135,17 +135,17 @@ public class Films {
               año = film_attr.getValue();
               System.out.println("Año: " + año);
             }
-            info = film.getChildNodes;
-            sizeI = info.getLength();
+            infoList = film.getChildNodes;
+            sizeI = infoList.getLength();
 
             for ( int j = 0; j < sizeI; j++){
-              currentI = info.item(j);
+              currentI = infoList.item(j);
               if(currentI.getNodeType() == Node.ELEMENT_NODE){
                 info = (Element) currentI;
                 film_attr = info.getAttributeNode("Director");
                 if(film_attr != null){
                   director = film_attr.getValue();
-                  System.out.ptintln("Director: " + director);
+                  System.out.println("Director: " + director);
                 }
               }
             }
