@@ -89,18 +89,18 @@ public class Films {
 
     private void printTitle(Document doc){
       Element docE1, film;
-      NodeList listaPeliculas;
+      NodeList filmList;
       Node current;
       Attr title_attr;
       int size;
       String title;
 
       docE1 = doc.getDocumentElement();
-      listaPeliculas = docE1.getChildNodes();
-      size = listaPeliculas.getLength();
+      filmList = docE1.getChildNodes();
+      size = filmList.getLength();
 
       for(int i = 0; i < size; i++){
-        current = listaPeliculas.item(i);
+        current = filmList.item(i);
         if(current.getNodeType() == Node.ELEMENT_NODE){
           film = (Element) current;
           title_attr = film.getAttributeNode("Titulo");
@@ -109,7 +109,53 @@ public class Films {
       }
       }
     }
-      private void printInfo(Document doc){}
+      private void printInfo(Document doc){
+        Element docE1, film, info;
+        NodeList filmList, info;
+        Node currentF, currentI;
+        Attr film_attr;
+        String title, director;
+        int sizeF, sizeI, year;
+
+        docE1 = doc.getDocumentElement();
+        filmList = docE1.getChildNodes();
+        sizeF = filmList.getLength();
+
+        for (int i = 0; i < sizeF; i++){
+          currentF = filmList.item(i);
+          if(currentF.getNodeType() == Node.ELEMENT_NODE){
+            film = (Element) currentF;
+            film_attr = film.getAttributeNode("Titulo");
+            title = film_attr.getValue();
+
+            System.out.println("Titulo: " + title);
+
+            film_attr = film.getAttributeNode("Año");
+            if(film_attr != null){
+              año = film_attr.getValue();
+              System.out.println("Año: " + año);
+            }
+            info = film.getChildNodes;
+            sizeI = info.getLength();
+
+            for ( int j = 0; j < sizeI; j++){
+              currentI = info.item(j);
+              if(currentI.getNodeType() == Node.ELEMENT_NODE){
+                info = (Element) currentI;
+                film_attr = info.getAttributeNode("Director");
+                if(film_attr != null){
+                  director = film_attr.getValue();
+                  System.out.ptintln("Director: " + director);
+                }
+              }
+            }
+
+
+          }
+        }
+
+
+      }
 
       private void addFilm(Document doc){}
 
