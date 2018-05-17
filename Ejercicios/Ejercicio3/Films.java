@@ -116,6 +116,7 @@ public class Films {
         Attr film_attr;
         String title, director, yearString;
         int sizeF, sizeI, year;
+        NamedNodeMap direc;
 
         docE1 = doc.getDocumentElement();
         filmList = docE1.getChildNodes();
@@ -138,8 +139,9 @@ public class Films {
             }
             infoList = film.getChildNodes();
             sizeI = infoList.getLength();
+            direc = film.getAttributes();
 
-              currentI = getNode("Director");
+              currentI = direc.getNamedItem("Director");
               if(currentI.getNodeType() == Node.ELEMENT_NODE){
                 info = (Element) currentI;
                 film_attr = info.getAttributeNode("Nombre");
@@ -148,7 +150,7 @@ public class Films {
                   System.out.println("Director: " + director);
                 }
               }
-            
+
 
 
           }
