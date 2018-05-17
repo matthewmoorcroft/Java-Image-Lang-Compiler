@@ -171,7 +171,10 @@ public class Films {
         Films films = new Films();
 
         docE1 = doc.getDocumentElement();
-        film = docE1.getElementsByTagName("pelicula");
+        filmList = docE1.getChildNodes();
+        current = filmList.item(0);
+        node_name = current.nodeName();
+        System.out.println(node_name);
 
         if(current.getNodeType() == Node.ELEMENT_NODE){
           film = (Element) current;
