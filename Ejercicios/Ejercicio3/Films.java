@@ -101,8 +101,8 @@ public class Films {
 
       for(int i = 0; i < size; i++){
         current = listaPeliculas.item(i);
-        film = (Element) current;
-        title_attr = film.getAttributeNode("Titulo");
+        //film = (Element) current;
+        title_attr = ((Element)current).getAttributeNode("Titulo");
         title = title_attr.getValue();
         System.out.println(title);
       }
