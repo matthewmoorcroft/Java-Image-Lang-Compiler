@@ -7,6 +7,7 @@ import org.w3c.dom.ls.LSException;
 import org.w3c.dom.ls.LSOutput;
 import org.w3c.dom.ls.LSSerializer;
 import java.io.*;
+import org.jdom2.*;
 
 /**
  *
@@ -99,7 +100,7 @@ public class Films {
       size = listaPeliculas.getLength();
 
       for(int i = 0; i < size; i++){
-        current = listaPeliculas.getItem(i);
+        current = listaPeliculas.item(i);
         title = current.getAttribute("Titulo");
         System.out.println(title);
       }
