@@ -211,7 +211,7 @@ public class Films {
   	}else if ("-L".equals(args[0])){
         films.printInfo(doc);
     }else if ("-a".equals(args[0])){
-        fi = new File()
+        fi = new File();
         films.addFilm(doc, myFile);
     }
   }
