@@ -147,24 +147,28 @@ public class Films {
                   if(film_attr != null){
                     dNombre = film_attr.getValue();
 
-                  film_attr = info.getAttributeNode("Apellido");
-                  if(film_attr != null){
-                    dApellido = film_attr.getValue();
-                    System.out.println("Director: " + dNombre + " " + dApellido);
+                    film_attr = info.getAttributeNode("Apellido");
+                    if(film_attr != null){
+                      dApellido = film_attr.getValue();
+                      System.out.println("Director: " + dNombre + " " + dApellido);
+                    }
                   }
                 }
-                }
-
-
-
-
           }
         }
 
 
       }
 
-      private void addFilm(Document doc){}
+      private void addFilm(Document doc){
+
+        String title = null, year = null, duration = null;
+        Films films = new Films();
+
+        while(title == null){
+          title = films.readInput("Escriba el título de la película");
+        }
+      }
 
 
 
