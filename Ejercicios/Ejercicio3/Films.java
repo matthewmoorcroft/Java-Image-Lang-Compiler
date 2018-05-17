@@ -138,6 +138,7 @@ public class Films {
             }
             infoList = film.getChildNodes();
             sizeI = infoList.getLength();
+            System.out.println("Tamaño info: " + sizeI);
 
             for ( int j = 0; j < sizeI; j++){
               currentI = infoList.item(j);
