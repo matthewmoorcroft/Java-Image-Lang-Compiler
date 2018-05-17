@@ -101,10 +101,12 @@ public class Films {
 
       for(int i = 0; i < size; i++){
         current = listaPeliculas.item(i);
-        //film = (Element) current;
-        title_attr = ((Element)current).getAttributeNode("Titulo");
-        title = title_attr.getValue();
-        System.out.println(title);
+        if(current.getNodeType() == Node.ELEMENT_NODE){
+          film = (Element) current;
+          title_attr = ((Element)current).getAttributeNode("Titulo");
+          title = title_attr.getValue();
+          System.out.println(title);
+      }
       }
     }
       private void printInfo(Document doc){}
