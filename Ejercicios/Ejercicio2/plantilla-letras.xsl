@@ -21,14 +21,14 @@
   <!-- <xsl:template match="/d">
     <xsl:copy-of select="//f"/>
   </xsl:template> -->
-  <xsl:template match="d">
+  <xsl:template match="*">
   <xsl:copy>
-    <xsl:apply-templates select="descendant::d"/>
+    <xsl:apply-templates select="@*"/>
   </xsl:copy>
   </xsl:template>
 
-  <!-- <xsl:template match="*">
+  <xsl:template match="@*">
   <xsl:copy />
-  </xsl:template> -->
+  </xsl:template>
 
 </xsl:stylesheet>
