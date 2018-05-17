@@ -177,11 +177,9 @@ public class Films {
             current = filmList.item(i);
             if(current.getNodeType() == Node.ELEMENT_NODE){
                   film = (Element) current;
-                  position = i;
                   break;
             }
         }
-        System.out.println(position);
         if(film != null){
           newFilm = film.cloneNode(false);
           newFilmE = (Element) newFilm;
@@ -191,7 +189,7 @@ public class Films {
           }
           newFilmE.setAttribute("Titulo", title);
           year = films.readInput("Año: ");
-          newFilmE.setAttribute("Año:", year);
+          newFilmE.setAttribute("Año", year);
           duration = films.readInput("Duración:");
           newFilmE.setAttribute("Duracion", duration);
 
