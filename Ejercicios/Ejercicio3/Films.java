@@ -181,7 +181,7 @@ public class Films {
                   break;
             }
         }
-        System.out.println(position)
+        System.out.println(position);
         if(film != null){
           newFilm = film.cloneNode(false);
           newFilmE = (Element) newFilm;
