@@ -103,7 +103,7 @@ public class Films {
         current = listaPeliculas.item(i);
         if(current.getNodeType() == Node.ELEMENT_NODE){
           film = (Element) current;
-          title_attr = ((Element)current).getAttributeNode("Titulo");
+          title_attr = film.getAttributeNode("Titulo");
           title = title_attr.getValue();
           System.out.println(title);
       }
