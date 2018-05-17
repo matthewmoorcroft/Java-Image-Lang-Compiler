@@ -197,11 +197,13 @@ public class Films {
     public static void main(String[] args)
 	throws Exception {
   	Films films = new Films();
+
   	if (args.length != 2) {
   	    printHelp();
   	    System.exit(1);
   	}
     String file = args[1];
+    File myFile = new File(file);
     Document doc = films.loadDocument(file);
 
   	if ("-l".equals(args[0])) {
@@ -209,7 +211,8 @@ public class Films {
   	}else if ("-L".equals(args[0])){
         films.printInfo(doc);
     }else if ("-a".equals(args[0])){
-        films.addFilm(doc, file);
+        fi = new File()
+        films.addFilm(doc, myFile);
     }
   }
 
