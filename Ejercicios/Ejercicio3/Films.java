@@ -120,6 +120,7 @@ public class Films {
         docE1 = doc.getDocumentElement();
         filmList = docE1.getChildNodes();
         sizeF = filmList.getLength();
+        System.out.println("Tamaño peliculas: " + sizeF);
 
         for (int i = 0; i < sizeF; i++){
           currentF = filmList.item(i);

@@ -1,11 +1,11 @@
 import org.w3c.dom.bootstrap.DOMImplementationRegistry;
 import org.w3c.dom.*;
-import org.w3c.dom.ls.DOMImplementationLS; 
-import org.w3c.dom.ls.LSParser; 
-import org.w3c.dom.ls.LSInput; 
+import org.w3c.dom.ls.DOMImplementationLS;
+import org.w3c.dom.ls.LSParser;
+import org.w3c.dom.ls.LSInput;
 import org.w3c.dom.ls.LSException;
 import org.w3c.dom.ls.LSOutput;
-import org.w3c.dom.ls.LSSerializer; 
+import org.w3c.dom.ls.LSSerializer;
 import java.io.*;
 
 /**
@@ -16,11 +16,11 @@ import java.io.*;
  */
 public class Films {
 
-    /* Este método lee un fichero XML y devuelve el objeto DOM
+    /* Este mï¿½todo lee un fichero XML y devuelve el objeto DOM
      Document que lo representa. */
 
-    private Document loadDocument(String fileName) 
-   				throws IOException, DOMException, LSException, java.lang.ClassNotFoundException, 
+    private Document loadDocument(String fileName)
+   				throws IOException, DOMException, LSException, java.lang.ClassNotFoundException,
    				java.lang.InstantiationException,java.lang.IllegalAccessException {
 
 		DOMImplementationRegistry registry;
@@ -33,13 +33,13 @@ public class Films {
 		domImp= registry.getDOMImplementation("LS 3.0");
 
         if (domImp==null) {
-		    System.out.println("No se encuentra el módulo LS v3.0");
+		    System.out.println("No se encuentra el mï¿½dulo LS v3.0");
 		    return null;
 		}
 
         domImpLS= (DOMImplementationLS) domImp;
         parser=domImpLS.createLSParser(DOMImplementationLS.MODE_SYNCHRONOUS, "http://www.w3.org/TR/REC-xml");
-                
+
 		lsInp= domImpLS.createLSInput();
 		lsInp.setByteStream(new FileInputStream(fileName));
 		return parser.parse(lsInp);
@@ -52,7 +52,7 @@ public class Films {
     }
 
 
-    /* Método para volcar a un fichero el documento XML representado
+    /* Mï¿½todo para volcar a un fichero el documento XML representado
        por un objeto Document */
 
     private void serialize(Document doc, File file) throws IOException, java.lang.ClassNotFoundException,
@@ -66,7 +66,7 @@ public class Films {
 		domImp= registry.getDOMImplementation("LS 3.0");
 
         if (domImp==null) {
-		    System.out.println("No se encuentra el módulo LS v3.0");
+		    System.out.println("No se encuentra el mï¿½dulo LS v3.0");
 		    return;
 		}
 
@@ -165,24 +165,24 @@ public class Films {
 			String duracion=null;
 
 			while(titulo==null){
-				titulo=films.readInput("Escriba el título de la película que desea guardar: ");
+				titulo=films.readInput("Escriba el tï¿½tulo de la pelï¿½cula que desea guardar: ");
 			}
 			((Element)current).setAttribute("Titulo", titulo);
-			anyo=films.readInput("Escriba el año de la película. Puede no escribirlo: ");
+			anyo=films.readInput("Escriba el aï¿½o de la pelï¿½cula. Puede no escribirlo: ");
 			if (anyo != null)
 				((Element)current).setAttribute("Anyo", anyo);
-			duracion=films.readInput("Escriba la duración de la película. Puede no escribirlo: ");
+			duracion=films.readInput("Escriba la duraciï¿½n de la pelï¿½cula. Puede no escribirlo: ");
 			if (duracion != null)
 				((Element)current).setAttribute("Duracion", duracion);
 			((Node)raiz).appendChild(current);
 
-			//Añadir ahora los opcionales, estos son: Director(es) y Actor(es), Genero y Nacionalidad.
+			//Aï¿½adir ahora los opcionales, estos son: Director(es) y Actor(es), Genero y Nacionalidad.
 			addTextNodes(current, raiz, "director", films, doc);
 			addTextNodes(current, raiz, "actor", films, doc);
 			addTextNodes(current, raiz, "genero", films, doc);
 			addTextNodes(current, raiz, "nacionalidad", films, doc);
 
-			
+
 			films.serialize(doc, file) ;
 
 		}
@@ -202,17 +202,17 @@ public class Films {
     	Text aux;
     	do{
 				value=null;
-				value=films.readInput("Escriba un "+tipo+" de la película. Puede no escribirlo: ");
+				value=films.readInput("Escriba un "+tipo+" de la pelï¿½cula. Puede no escribirlo: ");
 
 
 				if (value!=null){
 				  //Y aqui peta:
-					aux=doc.createTextNode(value);		
+					aux=doc.createTextNode(value);
 					((Node)parent).appendChild(aux);
-					
+
 				}
 				//else break;
 
-			}while(value.equals("\n")); //supuestamente añaden directores hasta que el usuario meta uno vacío. pero no va wiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii
+			}while(value.equals("\n")); //supuestamente aï¿½aden directores hasta que el usuario meta uno vacï¿½o. pero no va wiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii
     }
 }
