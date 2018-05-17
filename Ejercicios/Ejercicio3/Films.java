@@ -140,7 +140,7 @@ public class Films {
             infoList = film.getChildNodes();
             sizeI = infoList.getLength();
             direc = film.getAttributes();
-            currentI = infolist.item(1);
+            currentI = infoList.item(1);
                 info = (Element) currentI;
                 film_attr = info.getAttributeNode("Nombre");
                 if(film_attr != null){
