@@ -186,7 +186,7 @@ public class Films {
         //newFilm = (Node) newFilmE;
         ((Node)docE1).appendChild(newFilm);
 
-        films.serialize(doc, filename);
+        films.serialize(doc, (File) filename);
 
       }
 
