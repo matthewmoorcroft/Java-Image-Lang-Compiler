@@ -160,7 +160,7 @@ public class Films {
 
       }
 
-      private void addFilm(Document doc, String filename) throws IOException{
+      private void addFilm(Document doc, File filename) throws IOException{
 
         Element docE1, newFilmE;
         NodeList filmList;
