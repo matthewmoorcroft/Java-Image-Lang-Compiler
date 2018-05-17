@@ -163,7 +163,7 @@ public class Films {
       private void addFilm(Document doc, File filename) throws IOException, ClassNotFoundException, InstantiationException,
       IllegalAccessException{
 
-        Element docE1, newFilmE;
+        Element docE1, newFilmE, film;
         NodeList filmList;
         Node newFilm, current;
         String title = null, year = null, duration = null;
@@ -171,8 +171,9 @@ public class Films {
 
         docE1 = doc.getDocumentElement();
         filmList = docE1.getChildNodes();
-
-        newFilm = ((Element)((Node)docE1).getFirstChild()).cloneNode(false);
+        current = filmList.item(0);
+        film = (Element) current;
+        newFilm = film.cloneNode(false);
         newFilmE = (Element) newFilm;
 
         while(title == null){
