@@ -114,7 +114,7 @@ public class Films {
         NodeList filmList, infoList;
         Node currentF, currentI;
         Attr film_attr;
-        String title, director, yearString;
+        String title, dNombre, dApellido, yearString;
         int sizeF, sizeI, year;
         NamedNodeMap direc;
 
@@ -145,9 +145,14 @@ public class Films {
                 if (info != null){
                   film_attr = info.getAttributeNode("Nombre");
                   if(film_attr != null){
-                    director = film_attr.getValue();
-                    System.out.println("Director: " + director);
+                    dNombre = film_attr.getValue();
+
+                  film_attr = info.getAttributeNode("Apellido");
+                  if(film_attr != null){
+                    dApellido = film_attr.getValue();
+                    System.out.println("Director: " + dNombre + " " + dApellido);
                   }
+                }
                 }
 
 
