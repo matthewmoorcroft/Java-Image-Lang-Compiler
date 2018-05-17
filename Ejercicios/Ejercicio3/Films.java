@@ -7,7 +7,6 @@ import org.w3c.dom.ls.LSException;
 import org.w3c.dom.ls.LSOutput;
 import org.w3c.dom.ls.LSSerializer;
 import java.io.*;
-import org.jdom2.*;
 
 /**
  *
@@ -104,6 +103,9 @@ public class Films {
         title = current.getAttribute("Titulo");
         System.out.println(title);
       }
+      private void printTitle(Document doc){}
+
+      private void addFilm(Document doc){}
 
 
 
