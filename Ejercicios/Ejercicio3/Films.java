@@ -103,13 +103,14 @@ public class Films {
         title = current.getAttribute("Titulo");
         System.out.println(title);
       }
+    }
       private void printTitle(Document doc){}
 
       private void addFilm(Document doc){}
 
 
 
-    }
+
 
     public static void main(String[] args)
 	throws Exception {
