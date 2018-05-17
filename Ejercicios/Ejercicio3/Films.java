@@ -160,7 +160,8 @@ public class Films {
 
       }
 
-      private void addFilm(Document doc, File filename) throws IOException, ClassNotFoundException, InstantiationException{
+      private void addFilm(Document doc, File filename) throws IOException, ClassNotFoundException, InstantiationException,
+      IllegalAccessException{
 
         Element docE1, newFilmE;
         NodeList filmList;
