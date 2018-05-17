@@ -173,7 +173,7 @@ public class Films {
         docE1 = doc.getDocumentElement();
         filmList = docE1.getChildNodes();
         current = filmList.item(0);
-        node_attr = current.nodeName();
+        node_attr = current.nodeName;
         node_name = node_attr.getValue();
         System.out.println(node_name);
 
