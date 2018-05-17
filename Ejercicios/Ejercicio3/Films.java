@@ -160,7 +160,7 @@ public class Films {
 
       }
 
-      private void addFilm(Document doc){
+      private void addFilm(Document doc) throws IOException{
 
         String title = null, year = null, duration = null;
         Films films = new Films();
