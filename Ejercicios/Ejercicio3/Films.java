@@ -166,12 +166,17 @@ public class Films {
         Element docE1, newFilmE, film;
         NodeList filmList;
         Node newFilm, current;
-        String title = null, year = null, duration = null;
+        Attr node_attr;
+        String title = null, year = null, duration = null, node_name;
         Films films = new Films();
 
         docE1 = doc.getDocumentElement();
         filmList = docE1.getChildNodes();
         current = filmList.item(0);
+        node_attr = current.nodeName();
+        node_name = node_attr.getValue();
+        System.out.println(node_name);
+
         if(current.getNodeType() == Node.ELEMENT_NODE){
           film = (Element) current;
           newFilm = film.cloneNode(false);
