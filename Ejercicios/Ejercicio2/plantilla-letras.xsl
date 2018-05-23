@@ -7,14 +7,16 @@
 
   <xsl:output method="xml" indent="yes" encoding="ISO-8859-1" />
 
-  
+
 
   <xsl:template match="*">
    <xsl:copy-of select="." />
   </xsl:template>
 
   <xsl:template match="e">
+    <e>
       <xsl:apply-templates select="child::d" />
+    </e>
   </xsl:template>
 
   <!-- <xsl:template match="/d">
