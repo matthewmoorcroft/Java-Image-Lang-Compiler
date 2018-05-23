@@ -9,14 +9,13 @@
 
 
 
-  <xsl:template match="*">
-   <xsl:copy-of select="." />
-  </xsl:template>
 
   <xsl:template match="e">
-    <e>
-      <xsl:apply-templates select="child::d" />
-    </e>
+      <xsl:apply-templates select="e|d" />
+  </xsl:template>
+
+  <xsl:template match="*">
+   <xsl:copy-of select="." />
   </xsl:template>
 
   <!-- <xsl:template match="/d">
