@@ -10,14 +10,14 @@
 
 <xsl:template match="matrixE">
   <matrixE totalCeldas="{count(descendant::celdaE)}">
-    <xsl:apply-templates select="filasE[position()>1]"/>
+    <xsl:apply-templates select="filaE[position()&gt;1]"/>
   </matrixE>
 </xsl:template>
 
 <xsl:template match="filaE">
-  <filasE celdas="{count(descendant::celdaE)}">
-    <xsl:apply-templates select="celdaE[position()>1]"/>
-  </filasE>
+  <filaE celdas="{count(descendant::celdaE)}">
+    <xsl:apply-templates select="celdaE[position()&gt;1]"/>
+  </filaE>
 </xsl:template>
 
 
