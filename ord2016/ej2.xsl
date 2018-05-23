@@ -15,7 +15,7 @@
 </xsl:template>
 
 <xsl:template match="filaE">
-  <filas celdas="{count(descendant::celdaE)}">
+  <filasE celdas="{count(descendant::celdaE)}">
     <xsl:apply-template select="celdaE[position()=1]|celdaE[.>preceding-sibling::*]"/>
   </filasE>
 </xsl:template>
