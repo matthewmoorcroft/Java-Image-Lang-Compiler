@@ -17,8 +17,8 @@
     </xsl:element>
   </xsl:template>
 
-  <xsl:template match="e">
-    <xsl:copy-of select="." />
+  <xsl:template match="*">
+    <xsl:copy-of select="e|d" />
   </xsl:template>
 
   <!-- <xsl:template match="/d">
