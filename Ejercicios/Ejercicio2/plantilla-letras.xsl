@@ -7,7 +7,7 @@
 
   <xsl:output method="xml" indent="yes" encoding="ISO-8859-1" />
 
-  <xsl:strip-space elements="*" />
+  
 
   <xsl:template match="*">
    <xsl:copy-of select="." />
