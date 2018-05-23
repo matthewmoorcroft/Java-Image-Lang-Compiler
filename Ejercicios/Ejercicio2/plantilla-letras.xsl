@@ -4,12 +4,17 @@
   xmlns="letras"
   version="1.0">
 
+
   <xsl:output method="xml" indent="yes" encoding="ISO-8859-1" />
 
-  <xsl:template match="/a">
-    <xsl:element name="a" >
-      <xsl:apply-templates select="descendant::e/child::d" />
-    </xsl:element>
+  <xsl:strip-space elements="*" />
+
+  <xsl:template match="*">
+   <xsl:copy-of select="." />
+  </xsl:template>
+
+  <xsl:template match="e">
+      <xsl:apply-templates select="child::d" />
   </xsl:template>
 
   <!-- <xsl:template match="/d">
@@ -21,14 +26,7 @@
   <!-- <xsl:template match="/d">
     <xsl:copy-of select="//f"/>
   </xsl:template> -->
-  <xsl:template match="*">
-  <xsl:copy>
-    <xsl:apply-templates select="@*"/>
-  </xsl:copy>
-  </xsl:template>
+}
 
-  <xsl:template match="@*">
-  <xsl:copy />
-  </xsl:template>
 
 </xsl:stylesheet>
