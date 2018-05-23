@@ -18,7 +18,7 @@
   </xsl:template>
 
   <xsl:template match="*">
-    <xsl:copy />
+    <xsl:copy-of="." />
   </xsl:template>
 
   <!-- <xsl:template match="/d">
